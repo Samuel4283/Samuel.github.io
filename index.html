@@ -1,30 +1,148 @@
-<!doctype html>
-<html lang="zh-CN">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>
-            My test page
-        </title>
-    </head>
-    <body>
-        <h1>測試看看這個字</h1>
-        <img src="D:/winter桌布/1.png" alt="My test img">
-        <p>这是第一个段落。这是第一个段落。这是第一个段落。这是第一个段落。</p>
-        <p>这是第二个段落。这是第二个段落。这是第二个段落。这是第二个段落。</p>
-        <ul>
-            <li>li沒排序</li>
-            <li>second row</li>
-        </ul>
-        <ol>
-            <li>ol有排序</li>
-            <li>second row</li>
-        </ol>
-        <h1>接下來是連結</h1>
-        <a href="">這是我婆</a>
-        <a href="https://www.youtube.com/watch?v=UAQT5Hgrm1Q">這是我婆</a>
-        <button>Change User</button>
-        <script src="test.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>育聖的網站</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #f3f4f7);
+            color: #333;
+        }
+
+        /* 導覽列 */
+        .navbar {
+            background-color: #282c34;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #61dafb;
+        }
+
+        /* 主頁區域 */
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 動畫效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 粉絲短影片區塊 */
+        .shorts {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .short {
+            width: 300px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .short:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .short video {
+            width: 100%;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .short .caption {
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <div class="navbar">
+        <a href="#">Winter</a>
+    </div>
+
+    <!-- 主頁內容 -->
+    <div class="container">
+        <h1 class="heading">Welcome to Winter's Fan Page</h1>
+
+        <!-- 照片展示區 -->
+        <div class="gallery">
+            <img src="https://example.com/winter1.jpg" alt="Winter Image 1">
+            <img src="https://example.com/winter2.jpg" alt="Winter Image 2">
+            <img src="https://example.com/winter3.jpg" alt="Winter Image 3">
+            <img src="https://example.com/winter4.jpg" alt="Winter Image 4">
+        </div>
+
+        <!-- 粉絲短影片區 -->
+        <div class="shorts">
+            <div class="short">
+                <video src="https://example.com/short1.mp4" controls></video>
+                <div class="caption">Winter dancing clip</div>
+            </div>
+            <div class="short">
+                <video src="https://example.com/short2.mp4" controls></video>
+                <div class="caption">Winter's fan edit</div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
